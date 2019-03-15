@@ -25,7 +25,9 @@ for(var i = 0; i < grid.length; i++){
 function Logic() {
     if (this.style.backgroundColor === generatedColor) {
         generatedColorDisplay.textContent = "CORRECT!!!";
-        // Change all "squares" to that color
+        // Change all "squares" and headers to generated color
+        document.querySelector("h2").style.backgroundColor = generatedColor;        
+        document.querySelector("h1").style.backgroundColor = generatedColor;
         for(var i = 0; i < grid.length; i++){
             grid[i].style.backgroundColor = generatedColor;
         }
