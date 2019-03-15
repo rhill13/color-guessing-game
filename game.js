@@ -32,8 +32,12 @@ function Logic() {
             grid[i].style.backgroundColor = generatedColor;
         }
     } else {
-        alert("Incorrect...");
+        // Remove the cleared square
+        this.remove();
+        generatedColorDisplay.textContent = generatedColor + " - Try Again...";
     }
 }
 
-// Generate random colors
+// Generate random color
+
+// Fill grid with random colors
