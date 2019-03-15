@@ -1,11 +1,10 @@
-var listColors = [
-    "rgb(255, 0, 0)",
-    "rgb(255, 255, 0)",
-    "rgb(255, 0, 255)",
-    "rgb(0, 255, 255)",
-    "rgb(0, 0, 255)",
-    "rgb(0, 255, 0)",
-]
+var listColors = ["","","","","",""];
+
+var resetButton = document.querySelector("#rButton");
+
+for (var i = 0; i < 6; i++){
+    listColors[i] = GenerateRandomColor();
+}
 
 // Set up squares
 var grid = document.querySelectorAll(".square");
@@ -20,6 +19,11 @@ for(var i = 0; i < grid.length; i++){
 for(var i = 0; i < grid.length; i++){
     grid[i].addEventListener("click", Logic);
 }
+
+// Check reset button
+resetButton.addEventListener("click", function(){
+    window.location.reload(false);
+});
 
 // Game Logic Function
 function Logic() {
@@ -39,5 +43,11 @@ function Logic() {
 }
 
 // Generate random color
-
-// Fill grid with random colors
+function GenerateRandomColor() {
+    var threeNums = [0,0,0];
+    for(var i = 0; i < 3; i++){
+        threeNums[i] = Math.floor(Math.random() * 255);
+    }
+    var color = "rgb("+threeNums[0]+", "+threeNums[1]+", "+threeNums[2]+")";
+    return color; 
+}
