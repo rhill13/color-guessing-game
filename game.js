@@ -24,7 +24,11 @@ for(var i = 0; i < grid.length; i++){
 // Game Logic Function
 function Logic() {
     if (this.style.backgroundColor === generatedColor) {
-        alert("Correct!");
+        generatedColorDisplay.textContent = "CORRECT!!!";
+        // Change all "squares" to that color
+        for(var i = 0; i < grid.length; i++){
+            grid[i].style.backgroundColor = generatedColor;
+        }
     } else {
         alert("Incorrect...");
     }
