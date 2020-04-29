@@ -3,7 +3,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
 .square {
     background-color: purple;
     width: 30%;
@@ -13,13 +12,15 @@ body {
     border-radius: 50%;
 }
 
-#container {
-    margin: 0 auto;
+.container {
+    margin: 0 auto 50px auto;
     max-width: 600px;
+    text-align: center;
+    
 }
 
 h1 {
-    color: white;
+    color: black;
     text-align: center;
     background-color: blue;
     width: 100%;
